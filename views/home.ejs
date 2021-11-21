@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="stylesheets/style.min.css">
+
+    <link rel="shortcut icon" href="images/ToDoList_32x32.png" type="image/x-icon" sizes="32x32">
+    <title><%= title %></title>
+</head>
+<body>
+
+    <!-- *Header -->
+    <header class="header">
+        <div class="overlay has-fade hide-for-dekstop"></div>
+        <nav class="flex flex-jc-sb flex-ai-c ">
+            <a href="#">
+                <img src="images/ToDoList.svg" alt="ToDoList">
+            </a>
+
+            <a id="btnHumberger" class="header__toggle hide-for-dekstop" href="#">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+
+            <div class="header__link hide-for-mobile">
+                <a href="">Feature</a>
+                <a href="">Apps</a>
+                <a href="">Help Center</a>
+            </div>
+            
+            <div class="flex-jc-c hide-for-mobile">
+                <div class="header__link">
+                    <a href="">Login</a>
+                    <button class="btn header__cta">Daftar</button>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="header__menu has-fade hide-for-dekstop">
+            <a href="">Feature</a>
+            <a href="">Apps</a>
+            <a href="">Help Center</a>
+        </div>
+    </header>
+
+    <!-- *Content -->
+    <section class="home container">
+        <div class="home__image">
+        </div>
+        <div class="home__text">
+            <h1>
+                ToDoList fetures manage Yours life
+            </h1>
+            <p>
+                ToDoList is some App for yours planning, wich can help in manage yours planning just structure, fine, and good
+                come Let's using this App for manage better yours life 
+            </p>
+            <a class="btn hero__cta" href="#">Get Started</a>
+        </div>
+    </section>
+
+    <!-- *javascript -->
+    <script src="javascripts/script.js"></script>
+</body>
+</html>
