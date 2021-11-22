@@ -1,23 +1,41 @@
 .home {
     
+    h1 {
+        margin-top: 2.3125rem;
+        margin-left: 0.75rem;
+        color: $darkBlue;
+        font-size: 2.31rem;
+        line-height: 1.6;
+    }
+
+    p {
+        color: $darkBlue;
+        margin-left: 0.75rem;
+        margin-right: 0.75rem;
+        margin-bottom: 2.25rem;
+    }
+
     @include breakpoint-up(large) {
         display: flex;
     }
 
     &__image {
-        background-image: url('../images/to-do-list\(128x128\).png');
+        background-image: url('../images/contetLogo.svg');
         background-size: contain, cover;
         background-repeat: no-repeat;
         background-position: center center;
-        min-height: 10rem;
+        min-height: 20rem;
         margin-top: 2.5rem;
 
         @include breakpoint-up(large) {
             flex: 1;
             order: 2;
-            background-image: url('../images/to-do-list\(256x256\).png');
-            background-position: center center;
             margin-top: 0;
+        }
+
+        @include breakpoint-down(medium) {
+            min-height: 13rem;
+            margin-top: 0rem;
         }
     }
     
@@ -28,29 +46,12 @@
             order: 1;
             text-align: left;
 
-            .btn {
-                
+            .btn {       
                 transform: translateX(10%);
             }
         }
 
         text-align: center;
-        
-
-        h1 {
-            margin-top: 2.3125rem;
-            margin-left: 0.75rem;
-            color: $darkBlue;
-            font-size: 2.31rem;
-            line-height: 1.6;
-        }
-
-        p {
-            color: $darkBlue;
-            margin-left: 0.75rem;
-            margin-right: 0.75rem;
-            margin-bottom: 2.25rem;
-        }
 
         .btn{
             padding: 6px 6px;
@@ -58,5 +59,65 @@
             background: $rosy;
             display: inline-block;
         }
+    }
+
+    &__image-one {
+        background-image: url('../images/to-do-list\(128x128\).png');
+        background-size: contain, cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 10rem;
+
+        @include breakpoint-up(large) {
+            flex: 1;
+            order: 1;
+        }
+
+        @include breakpoint-down(medium) {
+            margin-top: 5rem;
+        }
+    }
+
+    &__text-one {
+
+        text-align: center;
+        
+        @include breakpoint-up(large) {
+            flex: 1;
+            order: 2;
+            text-align: right;
+        }
+
+        
+    }
+
+    &__image-two {
+        background-image: url('../images/reminders.png');
+        background-size: contain, cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        min-height: 10rem;
+
+        @include breakpoint-up(large) {
+            flex: 1;
+            order: 2;
+        }
+
+        @include breakpoint-down(medium) {
+            margin-top: 5rem;
+        }
+    }
+
+    &__text-two {
+
+        text-align: center;
+        
+        @include breakpoint-up(large) {
+            flex: 1;
+            order: 1;
+            text-align: left;
+        }
+
+        
     }
 }
