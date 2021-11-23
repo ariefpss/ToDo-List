@@ -1,4 +1,11 @@
 .home {
+
+    min-height: 5rem;
+    
+    @include breakpoint-up(large) {
+        display: flex;
+        min-height: 35rem;
+    }
     
     h1 {
         margin-top: 2.3125rem;
@@ -15,9 +22,6 @@
         margin-bottom: 2.25rem;
     }
 
-    @include breakpoint-up(large) {
-        display: flex;
-    }
 
     &__image {
         background-image: url('../images/contetLogo.svg');
@@ -62,7 +66,7 @@
     }
 
     &__image-one {
-        background-image: url('../images/to-do-list\(128x128\).png');
+        background-image: url('../images/image1.png');
         background-size: contain, cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -71,6 +75,7 @@
         @include breakpoint-up(large) {
             flex: 1;
             order: 1;
+            min-height: 29rem;
         }
 
         @include breakpoint-down(medium) {
@@ -87,12 +92,11 @@
             order: 2;
             text-align: right;
         }
-
         
     }
 
     &__image-two {
-        background-image: url('../images/reminders.png');
+        background-image: url('../images/reminder.png');
         background-size: contain, cover;
         background-repeat: no-repeat;
         background-position: center center;
@@ -101,6 +105,7 @@
         @include breakpoint-up(large) {
             flex: 1;
             order: 2;
+            min-height: 22rem;
         }
 
         @include breakpoint-down(medium) {
