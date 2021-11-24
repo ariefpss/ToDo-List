@@ -1,0 +1,49 @@
+.footer {
+    width: 100%;
+    min-height: 13rem;
+    background-color: $rosy;
+
+    ul {
+        list-style-type: none;
+        padding-top: 1.875rem;
+        margin-top: 0rem;
+
+        li {
+            margin-right: 1.875rem;
+            &:last-child {
+                margin-right: 0px;
+            }
+        }
+
+        &.text {
+            transform: translateX(-2.8%);
+
+            li {
+                cursor: pointer;
+                font-weight: bold;
+                transition: opacity 300ms ease-in-out;
+                
+                &:hover {
+                    color: $darkBlue;
+                    
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+
+        &.image {
+            padding: 0rem;
+            margin: 0rem;
+            
+            li {
+                padding-top: 0.625rem;
+                width: 55px;
+                min-height: 55px;
+            }
+        }
+    }
+
+}
