@@ -2,6 +2,18 @@
     width: 100%;
     height: 100%;
 
+    h2 {
+        color: $darkBlue;
+        margin-top: 1rem;
+    }
+
+    p {
+        margin-top: 2.6875rem;
+        color: $grey;
+        text-align: center;
+        font-size: $font-sm;
+    }
+
     &__container {
         width: 25rem;
         min-height: 50rem;
@@ -13,25 +25,70 @@
         
         border-style: solid;
         border-width: 0.125rem;
-        border-radius: 0.9375px;
+        border-radius: 0.9375rem;
+
+        .separator {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: $grey;
+            font-size: 15px;
+            width: 18.5rem;
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+
+            &::before, 
+            &::after {
+                content: "";
+                flex: 1;
+                border-bottom: 2px solid $lightGrey;
+            }
+
+            &:not(:empty)::before {
+                margin-right: 0.25rem;
+            }
+
+            &:not(:empty)::after {
+                margin-left: 0.25rem;
+            }
+        }
     }
 
     &__form {
         display: grid;
 
-        &--input-text {
+        .input-icon {
             width: 80%;
             margin-top: 1.5rem;
             margin-right: auto;
             margin-left: auto;
-            padding: 12px 20px;
-            border: none;
+            padding-bottom: 0.125rem;
+
             border-bottom: 2px solid $lightGrey;
 
-            &::placeholder {
-                opacity: 0.22;
+            i {
+                position: relative;
+                color: $lightGrey;
+                margin-left: 2px;
             }
 
+            input {
+                border: none;
+                padding-left: 10px; 
+                
+                &::placeholder {
+                    opacity: 0.22;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+
+                &:nth-child(1) {
+                    margin-top: 3rem;
+                }
+            }
         }
 
         span {
@@ -47,18 +104,42 @@
             opacity: 0;
         }
 
-        > input:focus {
-            outline: none;
-            border-bottom: none;
+        .btn-register {
+            width: 18.5rem;
+            margin-top: 1.25rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0.875rem 0.375rem;
+            border-radius: 0.125rem;
+            background: $rosy;
+            display: inline-block;
         }
 
-        > input:nth-child(1) {
-            margin-top: 3rem;
+        .btn-sign-with {
+            width: 18.5rem;
+            margin-top: 0.625rem;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 1.25rem;
+            background: #f7f9f9 ;
+            color: $grey;
+            border: 1px solid $lightGrey;
+            transition: opacity 300ms ease-in-out;
+
+            &:nth-child(1) {
+                margin-top: 1.875rem;
+            }
+
+            &:hover {
+                background: $lightBlue;
+                opacity: 0.75;
+            }
+
+            i {
+                margin-right: 2px;
+            }
         }
     }
 
-    h2 {
-        color: $darkBlue;
-        margin-top: 1rem;
-    }
+    
 }

@@ -41,7 +41,6 @@
     80% {width: 80%; opacity: 1;}
     to {opacity: 1;}
 }
-
 .focusin-input {
     animation: focusin-input 500ms ease-in-out forwards;
 }
@@ -53,7 +52,22 @@
     60% {width: 20%; opacity: 1;}
     80% {width: 0%; opacity: 0;}
 }
-
 .focusout-input {
     animation: focusout-input 500ms ease-in-out forwards;
+}
+
+@keyframes icon-inbackgroud {
+    from {color: $lightGrey;}
+    to {color: $lightRed;}
+}
+.icon-inbackgroud {
+    animation: icon-inbackgroud 300ms ease-in-out forwards;
+}
+
+@keyframes icon-outbackgroud {
+    from {color: $lightRed;}
+    to {color: $lightGrey;}
+}
+.icon-outbackgroud {
+    animation: icon-outbackgroud 300ms ease-in-out forwards;
 }
